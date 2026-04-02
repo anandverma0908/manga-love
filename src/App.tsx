@@ -47,9 +47,9 @@ const App: React.FC = () => {
           color: '#ffe01a', textShadow: '4px 4px 0 #e8192c',
           WebkitTextStroke: '2px #0a0806', letterSpacing: '0.1em',
         }}>LOADING...</div>
-        <div style={{ fontFamily: 'Comic Neue, cursive', color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem' }}>
+        {/* <div style={{ fontFamily: 'Comic Neue, cursive', color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem' }}>
           Place your photos in <code style={{ color: '#ffe01a' }}>public/assets/images/</code>
-        </div>
+        </div> */}
       </div>
     );
   }
@@ -76,13 +76,13 @@ const App: React.FC = () => {
       <main>
         <HeroSection />
 
-        <VolumeBanner text="★★★  CHAPTER 02 — &quot;MOMENT I KEEP&quot;  ★★★" />
+        <VolumeBanner text="★★★  CHAPTER 02 — The Face That Ruined Me ★★★" />
         <PhotoSection photos={photos} videos={videos} />
 
-        <VolumeBanner text={`★★★  CHAPTER 03 — A Letter I Wasn't Sure I'd Send  ★★★`} />
+        <VolumeBanner text={`★★★  CHAPTER 03 — Read This When You're Ready ★★★`} />
         <PoemSection />
 
-        <VolumeBanner text='★★★  FINAL CHAPTER — "EVEN AFTER THIS PAGE"  ★★★' />
+        <VolumeBanner text='★★★  FINAL CHAPTER — "WHATEVER YOU DECIDE"  ★★★' />
         <EndingSection />
       </main>
     </>

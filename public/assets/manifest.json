@@ -1,34 +1,33 @@
-
 {
   "_readme": "Just list your actual filenames below. Any name works — IMG_4521.jpg, myvideo.mp4, etc.",
 
   "images": [
     "images/photo0.jpg",
-    "images/photo1.jpg",
-    "images/IMG_6055.jpg",
-    "images/IMG_6636.jpg",
-    "images/IMG_6643.jpg",
-    "images/IMG_6044.jpg",
-    "images/IMG_6946.jpg",
-    "images/photo2.jpg",
-    "images/photo0.jpg"
+    "images/IMG1.jpg",
+    "images/IMG2.jpg",
+    "images/IMG3.jpg",
+    "images/IMG4.jpg",
+    "images/IMG5.jpg",
+    "images/IMG6.jpg",
+    "images/IMG7.jpg",
+    "images/IMG7.jpg"
 
   ],
 
-  "videos": ["videos/video2.mp4", "videos/video1.mp4"],
+  "videos": ["videos/VID1.mp4", "videos/VID2.mp4"],
 
-  "audio": "audio/song1.mp3",
+  "audio": "audio/song2.mp3",
 
   "captions": [
-    "The face I look for in every room ★",
-    "You laughed and I forgot what I was saying ✨",
-    "I took this because I never want to forget ♥",
-    "My favourite view — you, not knowing I'm watching 🌙",
-    "This moment cost nothing and meant everything ★",
-    "I keep coming back to this one ♥",
-    "Wherever this is — I'd go back in a second ✨",
-    "You make ordinary days feel like something ★",
-    "Still my favourite photo of all time 💛",
-    "Still my favourite photo of all time 💛"
+    "I looked at you and forgot how to be okay alone ★",
+    "You smiled and something in me never recovered ♥",
+    "I took this so I'd have something when you're not around ✨",
+    "You were just sitting there. I was completely gone ★",
+    "This is the one where I realised I was already yours ★",
+    "I don't need more than this. Just you, just here ✨",
+    "Even your ordinary days feel like something sacred ★",
+    "I memorised this because I was terrified of forgetting ♥",
+    "You have no idea what you do to me. None at all 💛",
+    "You have no idea what you do to me. None at all 💛"
   ]
 }

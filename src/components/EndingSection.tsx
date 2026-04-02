@@ -75,11 +75,11 @@ const EndingSection: React.FC = () => {
           <div className="spd" />
 
           <div ref={sfxRef} className={`${styles.sfxBig} sr`}>
-            THUMP
+            IT'S
             <br />
-            THUMP
+            STILL
             <br />
-            <span className={styles.sfxForever}>STILL YOU</span>
+            <span className={styles.sfxForever}>YOU</span>
           </div>
 
           <div
@@ -158,8 +158,9 @@ const EndingSection: React.FC = () => {
             style={{ transitionDelay: "0.5s" }}
           >
             <p>
-              ★ I don't need you to say it back. <br />I just needed you to
-              know. ★
+              "I'm not broken if you don't. I'm just someone who loved you with{" "}
+              <br />
+              everything he had. And that is enough." ★
             </p>
           </div>
         </div>
@@ -169,10 +170,10 @@ const EndingSection: React.FC = () => {
           <div className="ht" />
 
           <h2 ref={titleRef} className={`${styles.endTitle} sr`}>
-            TO BE
-            {/* <br />
-            <br /> */}
-            <span className={styles.endTitleAccent}> CONTINUED?</span>
+            WHATEVER
+            <br />
+            YOU
+            <span className={styles.endTitleAccent}> DECIDE</span>
           </h2>
 
           <div
@@ -181,7 +182,7 @@ const EndingSection: React.FC = () => {
             style={{ transitionDelay: "0.2s" }}
           >
             <p>THE END</p>
-            <small>★ not if I have anything to say about it ★</small>
+            <small>★ but my feelings? those don't end. ★</small>
           </div>
 
           <div
@@ -192,7 +193,7 @@ const EndingSection: React.FC = () => {
             <div className={styles.nextLbl}>▶ NEXT ISSUE PREVIEW</div>
             <div className={styles.nextTtl}>VOL. 3 — "She Said Something"</div>
             <div className={styles.nextSub}>
-              the chapter where everything changes...
+              the chapter he never thought he'd get to write.
             </div>
           </div>
 
