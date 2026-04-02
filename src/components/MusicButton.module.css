@@ -1,0 +1,23 @@
+.btn {
+  position: fixed;
+  top: 1rem; right: 1rem;
+  z-index: 9000;
+  width: 52px; height: 52px;
+  border-radius: 0;
+  background: var(--yellow);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  font-family: 'Bangers', cursive;
+  font-size: 1.4rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.12s, box-shadow 0.12s;
+  color: var(--ink);
+}
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--ink); }
+.on { background: var(--red); color: #fff; }
+
+@media (max-width: 480px) {
+  .btn { width: 42px; height: 42px; font-size: 1.1rem; }
+}

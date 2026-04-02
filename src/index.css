@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Indie+Flower&family=Comic+Neue:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --ink: #0a0806;
+  --paper: #faf6f0;
+  --red: #e8192c;
+  --yellow: #ffe01a;
+  --yellow2: #ffc800;
+  --blue: #1a3cff;
+  --cyan: #00d4f5;
+  --pink: #ff6b8a;
+  --shadow: 6px 6px 0 #0a0806;
+  --shadow-sm: 3px 3px 0 #0a0806;
+  --border: 3px solid #0a0806;
+  --border-thick: 5px solid #0a0806;
+  --border-xl: 8px solid #0a0806;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ink);
+  font-family: 'Comic Neue', cursive;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* cursor */
+.manga-cursor {
+  position: fixed;
+  width: 22px; height: 22px;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s;
+}
+
+/* halftone */
+.ht {
+  background-image: radial-gradient(circle, var(--ink) 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
+  opacity: 0.07;
+  position: absolute; inset: 0; pointer-events: none;
+}
+.ht-r {
+  background-image: radial-gradient(circle, var(--red) 1.8px, transparent 1.8px);
+  background-size: 10px 10px;
+  opacity: 0.15;
+  position: absolute; inset: 0; pointer-events: none;
+}
+.ht-y {
+  background-image: radial-gradient(circle, var(--yellow2) 1.5px, transparent 1.5px);
+  background-size: 9px 9px;
+  opacity: 0.14;
+  position: absolute; inset: 0; pointer-events: none;
+}
+
+/* speed lines */
+.spd {
+  position: absolute; inset: -50%;
+  background: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(0,0,0,0.055) 0deg, transparent 1.3deg,
+    transparent 4.2deg, rgba(0,0,0,0.04) 4.5deg
+  );
+  pointer-events: none;
+  animation: spinL 80s linear infinite;
+}
+@keyframes spinL { to { transform: rotate(360deg); } }
+
+/* scroll reveal */
+.sr {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.sr.sr-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.sr-pop {
+  opacity: 0;
+  transform: scale(0.85) rotate(-4deg);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.sr-pop.sr-visible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* click spark */
+.spark {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99998;
+  font-family: 'Bangers', cursive;
+  font-size: 1.1rem;
+  animation: sparkFly 0.85s ease-out forwards;
+}
+@keyframes sparkFly {
+  0% { opacity: 1; transform: translate(0, 0) scale(0.4); }
+  100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1.3); }
+}
+
+/* vol banner */
+.vol-banner {
+  background: var(--ink);
+  color: var(--yellow);
+  font-family: 'Bangers', cursive;
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  letter-spacing: 0.45em;
+  text-align: center;
+  padding: 0.55rem 1rem;
+  border-top: var(--border);
+  border-bottom: var(--border);
+  position: relative; z-index: 5;
+}
+
+/* action word float */
+@keyframes actionPop {
+  0%, 100% { transform: scale(1) rotate(var(--r, 0deg)); }
+  50% { transform: scale(1.09) rotate(var(--r, 0deg)); }
+}
+@keyframes wobble {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg); }
+}
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.32); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.18); }
+  56% { transform: scale(1); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-9px); }
+}
+@keyframes slamIn {
+  0% { opacity: 0; transform: scale(1.45) rotate(-4deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0) rotate(-12deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes sfxPulse {
+  0%, 100% { opacity: 0.85; transform: scale(1) rotate(var(--r, 0deg)); }
+  50% { opacity: 1; transform: scale(1.07) rotate(var(--r, 0deg)); }
+}
+@keyframes floatSym {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-14px) rotate(var(--r, 0deg)); }
+}
+@keyframes endFloat {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-20px) rotate(var(--r, 0deg)); }
+}

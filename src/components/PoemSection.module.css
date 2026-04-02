@@ -1,0 +1,183 @@
+.section {
+  position: relative;
+  background: var(--ink);
+  border-bottom: var(--border-xl);
+  overflow: hidden;
+}
+
+.inkStripes {
+  position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(
+    -55deg, transparent 0, transparent 18px,
+    rgba(255,255,255,0.025) 18px, rgba(255,255,255,0.025) 20px
+  );
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* ── LEFT ── */
+.left {
+  position: relative;
+  border-right: var(--border-xl);
+  padding: clamp(3rem,6vw,4rem) clamp(1.5rem,4vw,3rem);
+  display: flex; flex-direction: column; justify-content: center;
+  overflow: hidden;
+}
+
+.floatSym {
+  position: absolute;
+  font-family: 'Bangers', cursive;
+  pointer-events: none;
+  animation: floatSym ease-in-out infinite;
+}
+
+.chapterLabel {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(0.7rem,1.8vw,0.82rem);
+  letter-spacing: 0.48em; color: var(--yellow);
+  margin-bottom: 0.8rem;
+  position: relative; z-index: 2;
+}
+
+.bigTitle {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(2.5rem,6vw,6rem);
+  line-height: 0.9; color: var(--paper);
+  -webkit-text-stroke: 1.5px var(--paper);
+  text-shadow: 5px 5px 0 var(--red);
+  margin-bottom: 1.4rem;
+  position: relative; z-index: 2;
+  text-align: center;
+}
+.bigTitle em {
+  color: var(--yellow);
+  -webkit-text-stroke: 1.5px var(--ink);
+  text-shadow: 4px 4px 0 var(--ink);
+  font-style: normal; display: block;
+}
+
+.thought {
+  position: relative; display: inline-block;
+  background: #fff; border: var(--border-thick);
+  border-radius: 18px; padding: 0.9rem 1.3rem;
+  margin-top: 0.8rem; box-shadow: var(--shadow);
+  max-width: 100%; position: relative; z-index: 2;
+}
+.thought::after {
+  content: '';
+  position: absolute; bottom: -21px; left: 22px;
+  border: 11px solid transparent;
+  border-top: 11px solid var(--ink);
+}
+.thought::before {
+  content: '';
+  position: absolute; bottom: -14px; left: 25px;
+  border: 8px solid transparent;
+  border-top: 8px solid #fff; z-index: 2;
+}
+.thought p {
+  font-family: 'Indie Flower', cursive;
+  font-size: clamp(0.78rem,2vw,0.88rem);
+  color: var(--ink); line-height: 1.65;
+}
+
+.iconRow {
+  display: flex; gap: 0.55rem; margin-top: 1.8rem;
+  flex-wrap: wrap; position: relative; z-index: 2;
+}
+.iconSq {
+  width: clamp(40px,7vw,52px); height: clamp(40px,7vw,52px);
+  border: var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: clamp(1.1rem,2.5vw,1.5rem);
+  box-shadow: var(--shadow-sm); flex-shrink: 0;
+  font-family: 'Bangers', cursive;
+}
+
+/* ── RIGHT ── */
+.right {
+  position: relative;
+  background: var(--paper);
+  border-left: var(--border-xl);
+  display: flex; flex-direction: column;
+  padding: clamp(2.5rem,5vw,4rem) clamp(1.5rem,4vw,3rem);
+  overflow: hidden;
+}
+/* ruled lines */
+.right::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(
+    to bottom, transparent 0, transparent 39px,
+    rgba(10,8,6,0.1) 39px, rgba(10,8,6,0.1) 40px
+  );
+  pointer-events: none; z-index: 1;
+}
+/* red margin */
+.right::after {
+  content: '';
+  position: absolute; top: 0; bottom: 0; left: 58px;
+  width: 2px; background: rgba(232,25,44,0.38);
+  pointer-events: none; z-index: 1;
+}
+
+.poemHdr {
+  display: flex; align-items: center; gap: 0.9rem;
+  margin-bottom: 1.8rem; position: relative; z-index: 5;
+}
+.hdrLine { flex: 1; height: 3px; background: var(--ink); }
+.titleInput {
+  font-family: 'Permanent Marker', cursive;
+  font-size: clamp(1rem,3vw,1.45rem); color: var(--ink);
+  background: transparent; border: none;
+  border-bottom: 3px solid var(--ink);
+  outline: none; text-align: center;
+  padding: 0.2rem 0.4rem; width: 100%;
+  position: relative; z-index: 5;
+}
+.titleInput::placeholder { color: rgba(10,8,6,0.28); }
+
+.poemTa {
+  flex: 1;
+  background: transparent; border: none; outline: none; resize: none;
+  font-family: 'Indie Flower', cursive;
+  font-size: clamp(0.9rem,2.5vw,1.12rem);
+  line-height: 2.5; color: var(--ink);
+  position: relative; z-index: 5;
+  caret-color: var(--red);
+  padding-left: clamp(1rem,8vw,68px);
+  min-height: 280px;
+}
+.poemTa::placeholder { color: rgba(10,8,6,0.24); font-style: italic; }
+
+.footer {
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: var(--border); padding-top: 0.75rem;
+  margin-top: 0.9rem; position: relative; z-index: 5;
+  flex-wrap: wrap; gap: 0.5rem;
+}
+.signature {
+  font-family: 'Permanent Marker', cursive;
+  font-size: clamp(0.8rem,2.5vw,0.95rem); color: var(--red);
+}
+.footerRight { display: flex; gap: 0.45rem; align-items: center; }
+.hearts { font-family: 'Bangers', cursive; font-size: clamp(1rem,2.5vw,1.25rem); color: var(--red); }
+.pageNum {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(0.9rem,2.5vw,1.15rem); color: var(--ink);
+  background: var(--yellow); border: 2px solid var(--ink);
+  padding: 0.1rem 0.48rem; box-shadow: var(--shadow-sm);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .grid { grid-template-columns: 1fr; }
+  .left { border-right: none; border-bottom: var(--border-xl); min-height: auto; padding-bottom: 3rem; }
+  .right { border-left: none; min-height: 70vh; }
+  .right::after { left: 40px; }
+  .poemTa { padding-left: 50px; }
+}

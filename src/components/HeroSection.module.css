@@ -1,0 +1,269 @@
+/* ── keyframes defined locally (CSS Modules can't use global @keyframes) ── */
+@keyframes popIn {
+  0%   { opacity: 0; transform: scale(0) rotate(-12deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+@keyframes slamIn {
+  0%   { opacity: 0; transform: scale(1.45) rotate(-4deg); }
+  100% { opacity: 1; transform: scale(1)    rotate(0deg); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes wobble {
+  0%, 100% { transform: rotate(-6deg); }
+  50%       { transform: rotate(6deg); }
+}
+@keyframes actionPop {
+  0%, 100% { transform: scale(1)    rotate(var(--r, 0deg)); }
+  50%       { transform: scale(1.09) rotate(var(--r, 0deg)); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(-9px); }
+}
+
+/* ══════════════════════════════════
+   HERO — MANGA COVER SPLASH
+══════════════════════════════════ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--paper);
+  overflow: hidden;
+  border-bottom: var(--border-xl);
+}
+
+/* diagonal yellow split — full bleed */
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(138deg, var(--yellow) 0%, var(--yellow) 47%, var(--paper) 47%);
+  z-index: 0;
+}
+
+/* ── corner tag ── */
+.cornerTag {
+  position: absolute; top: 0; left: 0; z-index: 30;
+  background: var(--ink); color: var(--yellow);
+  font-family: 'Bangers', cursive;
+  font-size: clamp(0.65rem, 2vw, 0.95rem);
+  letter-spacing: 0.18em;
+  padding: 0.4rem 1rem 0.4rem 0.7rem;
+  clip-path: polygon(0 0, 100% 0, 93% 100%, 0 100%);
+}
+
+/* ── price sticker ── */
+.priceSticker {
+  position: absolute; top: 1rem; right: 4.8rem; z-index: 30;
+  width: clamp(56px, 9vw, 70px);
+  height: clamp(56px, 9vw, 70px);
+  background: var(--red);
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  box-shadow: var(--shadow-sm);
+  animation: wobble 3s ease-in-out infinite;
+}
+.priceLabel { font-family: 'Bangers', cursive; font-size: 0.58rem; color: #fff; letter-spacing: 0.1em; }
+.priceVal   { font-family: 'Bangers', cursive; font-size: clamp(0.95rem, 2vw, 1.25rem); color: var(--yellow); line-height: 1; }
+
+/* ── floating action words ── */
+.aw {
+  position: absolute;
+  font-family: 'Bangers', cursive;
+  -webkit-text-stroke: 2px var(--ink);
+  pointer-events: none;
+  z-index: 6;
+  animation: actionPop ease-in-out infinite;
+}
+
+/* ══════════════════
+   TWO-COLUMN GRID
+══════════════════ */
+.grid {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ── LEFT — title panel ── */
+.left {
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1.5rem, 4vw, 3.5rem) clamp(2rem, 4vw, 3rem);
+  display: flex; flex-direction: column; justify-content: center;
+  border-right: var(--border-xl);
+  position: relative; overflow: hidden;
+}
+
+/* chapter badge */
+.chLabel {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(0.65rem, 1.8vw, 0.9rem);
+  letter-spacing: 0.4em;
+  color: var(--ink);
+  background: var(--yellow);
+  border: var(--border);
+  display: inline-block;
+  padding: 0.22rem 0.8rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+  /* ▼ entrance */
+  opacity: 0;
+  animation: popIn 0.5s 0.3s cubic-bezier(0.22, 0.68, 0, 1.6) both;
+}
+
+/* big title */
+.title {
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  font-size: clamp(3.2rem, 8.5vw, 8rem);
+  line-height: 0.82;
+  color: var(--ink);
+  -webkit-text-stroke: 2px var(--ink);
+  text-shadow: 6px 6px 0 var(--red);
+  /* ▼ entrance */
+  opacity: 0;
+  animation: slamIn 0.65s 0.55s cubic-bezier(0.22, 0.68, 0, 1.2) both;
+}
+.title em {
+  color: var(--red);
+  font-style: normal;
+  -webkit-text-stroke: 2px var(--ink);
+  text-shadow: 6px 6px 0 var(--ink);
+  display: block;
+}
+
+/* subtitle */
+.subtitle {
+  font-family: 'Permanent Marker', cursive;
+  font-size: clamp(0.72rem, 1.9vw, 0.95rem);
+  color: var(--ink);
+  margin-top: 1.1rem;
+  line-height: 1.6;
+  /* ▼ entrance */
+  opacity: 0;
+  animation: fadeUp 0.6s 1s both;
+}
+
+/* speech bubble */
+.bubble {
+  position: relative;
+  background: #fff;
+  border: var(--border-thick);
+  padding: 0.78rem 1.15rem;
+  margin-top: 1.5rem;
+  display: inline-block;
+  box-shadow: var(--shadow);
+  max-width: 100%;
+  /* ▼ entrance */
+  opacity: 0;
+  animation: popIn 0.5s 1.3s cubic-bezier(0.22, 0.68, 0, 1.6) both;
+}
+.bubble::before {
+  content: '';
+  position: absolute; top: -3px; left: 28px;
+  transform: translateY(-100%);
+  border: 16px solid transparent;
+  border-bottom: 18px solid var(--ink);
+}
+.bubble::after {
+  content: '';
+  position: absolute; top: 0px; left: 31px;
+  transform: translateY(-100%);
+  border: 13px solid transparent;
+  border-bottom: 15px solid #fff;
+  z-index: 1;
+}
+.bubble p {
+  font-family: 'Comic Neue', cursive; font-weight: 700;
+  font-size: clamp(0.68rem, 1.7vw, 0.82rem);
+  color: var(--ink); line-height: 1.55;
+}
+
+/* ── RIGHT — heart panel ── */
+.right {
+  position: relative;
+  overflow: hidden;
+  background: var(--red);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.effectTxt {
+  position: absolute; top: 0; left: 0; right: 0;
+  font-family: 'Bangers', cursive;
+  font-size: clamp(1.6rem, 4vw, 3.2rem);
+  color: rgba(255,255,255,0.1);
+  letter-spacing: 0.05em;
+  overflow: hidden; white-space: nowrap;
+  padding: 0.4rem; pointer-events: none;
+}
+
+.heartWrap {
+  position: relative; z-index: 10;
+  display: flex; flex-direction: column; align-items: center;
+  /* ▼ entrance */
+  opacity: 0;
+  animation: slamIn 0.7s 0.8s cubic-bezier(0.22, 0.68, 0, 1.2) both;
+}
+.heartSvg {
+  width: clamp(160px, 40vw, 300px);
+  height: clamp(160px, 40vw, 300px);
+  filter: drop-shadow(8px 8px 0 var(--ink));
+}
+.doki {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(1.1rem, 3vw, 2.1rem);
+  color: #fff;
+  letter-spacing: 0.22em;
+  text-shadow: 3px 3px 0 var(--ink);
+  margin-top: 0.6rem;
+}
+
+/* ── scroll hint ── */
+.scrollArr {
+  position: absolute; bottom: 1.2rem; left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  animation: bounce 1.5s ease-in-out infinite;
+  font-family: 'Bangers', cursive;
+  font-size: clamp(0.65rem, 1.8vw, 1rem);
+  letter-spacing: 0.18em;
+  color: var(--ink);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ══════════════════
+   MOBILE ≤ 700px
+══════════════════ */
+@media (max-width: 700px) {
+  .hero::before {
+    background: linear-gradient(180deg, var(--yellow) 0%, var(--yellow) 50%, var(--paper) 50%);
+  }
+  /* stack vertically */
+  .grid {
+    position: relative;
+    inset: unset;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .left {
+    border-right: none;
+    border-bottom: var(--border-xl);
+    padding-top: clamp(4rem, 12vw, 6rem);
+    flex: 1;
+  }
+  .right { min-height: 55vw; }
+  .aw { display: none; }
+  .priceSticker { right: 1rem; top: 0.8rem; }
+  .heartSvg {
+    width: clamp(140px, 55vw, 220px);
+    height: clamp(140px, 55vw, 220px);
+  }
+  .title { font-size: clamp(3rem, 13vw, 5rem); }
+}

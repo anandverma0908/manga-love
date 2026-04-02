@@ -1,0 +1,14 @@
+.banner {
+  background: #0a0806;
+  color: #ffe01a;
+  font-family: 'Bangers', cursive;
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  letter-spacing: 0.45em;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  border-top: 4px solid #0a0806;
+  border-bottom: 4px solid #0a0806;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

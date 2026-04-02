@@ -1,0 +1,31 @@
+{
+  "_readme": "Just list your actual filenames below. Any name works — IMG_4521.jpg, myvideo.mp4, etc.",
+
+  "images": [
+    "images/photo1.jpg",
+    "images/IMG_7496.jpg",
+    "images/IMG_7498.JPG",
+    "images/IMG_7447.jpg",
+    "images/IMG_6795.jpg",
+    "images/IMG_7435.JPG",
+    "images/IMG_7388.JPG",
+    "images/IMG_7271.JPG",
+    "images/0d23e519-b859-4066-911e-f6447931ad6e.JPG"
+  ],
+
+  "videos": ["videos/IMG_7393.mov","videos/IMG_7524.mp4"],
+
+  "audio": "audio/song.mp3",
+
+  "captions": [
+    "Our favourite moment together ★",
+    "That smile changes everything ✨",
+    "My whole world ♥",
+    "Adventures await us ★",
+    "Wild and free ♥",
+    "Late night magic ✨",
+    "You bloom everywhere ♥",
+    "You are my universe 💫",
+    "Cozy days together ☕"
+  ]
+}
