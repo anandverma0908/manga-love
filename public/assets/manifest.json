@@ -3,29 +3,28 @@
 
   "images": [
     "images/photo1.jpg",
-    "images/IMG_7496.jpg",
-    "images/IMG_7498.JPG",
-    "images/IMG_7447.jpg",
-    "images/IMG_6795.jpg",
-    "images/IMG_7435.JPG",
-    "images/IMG_7388.JPG",
-    "images/IMG_7271.JPG",
-    "images/0d23e519-b859-4066-911e-f6447931ad6e.JPG"
+    "images/photo1.jpg",
+    "images/IMG_6055.jpg",
+    "images/IMG_6636.jpg",
+    "images/IMG_6643.jpg",
+    "images/IMG_6044.jpg",
+    "images/IMG_6946.jpg",
+    "images/photo2.jpg"
   ],
 
-  "videos": ["videos/IMG_7393.mov","videos/IMG_7524.mp4"],
+  "videos": ["videos/video2.mp4", "videos/video1.mp4"],
 
-  "audio": "audio/song.mp3",
+  "audio": "audio/song1.mp3",
 
   "captions": [
-    "Our favourite moment together ★",
-    "That smile changes everything ✨",
-    "My whole world ♥",
-    "Adventures await us ★",
-    "Wild and free ♥",
-    "Late night magic ✨",
-    "You bloom everywhere ♥",
-    "You are my universe 💫",
-    "Cozy days together ☕"
+    "The face I look for in every room ★",
+    "You laughed and I forgot what I was saying ✨",
+    "I took this because I never want to forget ♥",
+    "My favourite view — you, not knowing I'm watching 🌙",
+    "This moment cost nothing and meant everything ★",
+    "I keep coming back to this one ♥",
+    "Wherever this is — I'd go back in a second ✨",
+    "You make ordinary days feel like something ★",
+    "Still my favourite photo of all time 💛"
   ]
 }

@@ -64,13 +64,13 @@ const PhotoSection: React.FC<Props> = ({ photos, videos }) => {
         <div className={styles.secNum}>02</div>
         <div>
           <div className={styles.secTtl}>
-            THE MOMENTS I NEVER WANT TO FORGET<br />
+            THE FACE I KEEP COMING BACK TO<br />
             {/* <span>★ place photos in public/assets/images ★</span> */}
           </div>
         </div>
         <div className={styles.hdrBubble}>
           <div className={styles.hdrBubbleInner}>
-            <p>SO<br />CUTE!!</p>
+            <p>TO<br />CUTE!!</p>
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@ const PhotoSection: React.FC<Props> = ({ photos, videos }) => {
         {/* SFX */}
         <div className={styles.sfx} style={{ top: '0.8rem', right: '2.8rem', fontSize: 'clamp(1.5rem,3.5vw,2.8rem)', color: 'var(--red)', '--r': '-8deg' } as React.CSSProperties}>SNAP!</div>
         <div className={styles.sfx} style={{ top: '13rem', left: '63%', fontSize: 'clamp(1.2rem,2.5vw,1.9rem)', color: 'var(--blue)', '--r': '5deg', animationDelay: '.5s' } as React.CSSProperties}>FLASH~</div>
-        <div className={styles.sfx} style={{ bottom: '1.5rem', left: '2.5rem', fontSize: 'clamp(1.2rem,3vw,2.3rem)', color: 'var(--yellow2)', WebkitTextStroke: '2px var(--ink)', '--r': '-5deg', animationDelay: '1s' } as React.CSSProperties}>CLICK!</div>
+        <div className={styles.sfx} style={{ bottom: '1.5rem', left: '2.5rem', fontSize: 'clamp(1.2rem,3vw,2.3rem)', color: 'var(--yellow2)', WebkitTextStroke: '2px var(--ink)', '--r': '-5deg', animationDelay: '1s' } as React.CSSProperties}>THUMP!</div>
 
         {/* Row 1 — big asymmetric grid */}
         <div className={styles.row1}>

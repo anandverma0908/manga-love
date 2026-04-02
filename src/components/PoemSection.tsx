@@ -8,59 +8,94 @@ const PoemSection: React.FC = () => {
   const taRef = useScrollReveal<HTMLTextAreaElement>();
   const ftrRef = useScrollReveal<HTMLDivElement>();
 
-  const poemTitle = "✦ In Every Line, It’s You ✦";
+  const poemTitle = "✦ I Loved You Quietly ✦";
 
-  const poemText = `I still find it funny, in the sweetest way,
-how life brought you to me on an ordinary day,
-Through LinkedIn of all places, simple and blue,
-yet somehow, it led my whole world to you  
+  const poemText = `I never made a scene, I never made a sound,
+I just watched you from the place where I was found
+somewhere in the middle of an ordinary day,
+when you smiled at nothing much and stole my breath away.
+No announcement, no confession, no grand poetic line,
+just the quiet realisation oh, I think that you are mine.
+Not mine to keep, not mine to claim, not mine to hold too tight,
+just mine the way the moon believes it's meant to hold the night.
 
-From a message, a laugh, a moment so small,
-I didn’t even notice when you became my all,
-Somewhere between “hi” and the talks we grew into,
-my heart quietly started choosing you  
+I loved you in the details that you never thought to show
+the way you bite your lip when there is something that you know,
+the way you laugh too early, way before the punchline lands,
+the way you talk with all your heart and both your restless hands.
+I loved you in the Tuesday when the sky was dull and grey,
+when you weren't trying to be anything and gave yourself away
+not the version dressed for people, not the smile you keep on cue,
+but the quiet, tired, real and raw and undefended you.
+That version of you is the one I fell for
+the one that doesn't know it's beautiful, the one that doesn't have to try,
+the one that doesn't even know it's loved but somehow gets by
+God, that version of you is the one I love, the one I see when I close my eyes
+that is where I fell for you.
 
-Ladoo… even your name feels warm and light,
-like a soft little comfort I hold on tight,
-A name I could whisper a thousand times,
-and still feel magic in every rhyme  
+I counted all the moments that I nearly said the words,
+they stack up like a flock of songs in unrecorded birds
+at the end of every evening when the night was soft and deep,
+when you said goodnight and hung up and I couldn't fall asleep.
+I held my phone in silence and I stared up at the ceiling,
+trying to find the language for this unbearable feeling
+but every word felt smaller than the thing I had inside,
+so I swallowed it like always, tucked it somewhere safe to hide.
 
-Your curly hair dancing without a care,
-like even the wind gets lost in there,
-Your beautiful eyes, so gentle, so true,
-like they’re telling stories only I can view  
+I loved you without asking you for anything in return,
+the way a candle doesn't need the darkness to confirm it burns
+it simply gives its light away and doesn't keep the score,
+and even as it flickers low, it tries to give some more.
+That is what this feels like
+not a bargain, not a game,
+not a love that comes with conditions or a heart that stakes a claim.
+Just a love that shows up quietly and sits beside you still,
+not because it has to but because it always will.
 
-And your smile… I don’t know where to start,
-it doesn’t just shine it rewrites my heart,
-Turns ordinary days into something new,
-just by being there, just by being you  
+I loved you when you doubted every beautiful thing you are,
+when you looked into the mirror and you couldn't see the star
+I wanted to reach through every wall you carefully had laid
+and say you are the reason light was invented, don't be afraid.
+I loved you when you were distant and I couldn't find the door,
+when I didn't know what you were feeling or what you needed more
+I just stayed, because the staying was the only thing I knew,
+because leaving never once crossed the part of me that's you.
 
-And when you say “don’t kiss me” that way,
-so soft, so cute I just want to stay,
-right in that moment, a little longer than I should,
-because everything about you just feels so good  
+There is a kind of loving that the loud world never sees,
+it doesn't trend, it doesn't shout, it doesn't aim to please
+it just folds itself into the fabric of your every day,
+in every small and ordinary and forgettable way.
+It's in the things I remembered that you mentioned once in passing,
+it's in the way I hoped each time I saw you it was lasting,
+it's in the silence after laughter when I looked at you and knew
+that every version of my future somehow started here, with you.
 
-It’s never just big things, it’s all the small parts,
-the laughs, the silence, the unspoken hearts,
-The way you exist, so simply, so true,
-makes everything brighter just because it’s you  
+I do not know the map of what you carry in your chest,
+I do not know if what I am to you is second, first or best
+and I have made my peace with all the things I cannot know,
+because some flowers bloom in quiet and some rivers barely flow.
+But what I know is this
+and I need you to receive it,
+press it to your chest like something fragile and believe it
 
-If love were pages, I’d write you in all,
-in every line, every rise, every fall,
-And even then, it wouldn’t be enough to say,
-how much you’ve changed me in every way  
+I love you.
+Not the version I perform for anyone who's watching,
+not the version wrapped in poetry to make it less than haunting 
+the real kind. The kind that scares me. The kind I can't undo.
+The steady, certain, patient, quiet kind — and it is only you.
+It was only ever you.
+On every ordinary Tuesday,
+in every unremarkable room,
+in every silence where I almost said it,
+in every night I held it like a wound
+it was you.
+It has always,
+quietly,
+faithfully,
+completely
+been you.
 
-You’re not just someone I happened to find,
-you’re peace to my chaos, calm to my mind,
-Not just my world but the reason it’s right,
-the reason my days feel warm and bright  
-
-And if this story keeps turning its page,
-through every chapter, through every stage,
-One thing will stay, simple and true
-
-In every lifetime,
-I’ll still choose you.`;
+Still yours, whether you know it or not. 💛`;
 
   return (
     <section className={styles.section} id="poem">
@@ -124,20 +159,22 @@ I’ll still choose you.`;
 
           <p className={styles.chapterLabel}>★ CHAPTER 03 ★</p>
           <h2 className={styles.bigTitle}>
-            INK
+            WORDS
             <br />
             <em>
-              FROM
+              I
               <br />
-              MY
+              ALMOST
             </em>
             <br />
-            HEART
+            SAID
           </h2>
 
           <div className={styles.thought}>
             <p>
-              If I couldn’t say it, I wrote it... for you. ♥
+              There's so much I want to tell you... I just hope you can feel it{" "}
+              <br />
+              even when I can't say it. ♥
             </p>
           </div>
 
