@@ -1,15 +1,18 @@
+
 {
   "_readme": "Just list your actual filenames below. Any name works — IMG_4521.jpg, myvideo.mp4, etc.",
 
   "images": [
-    "images/photo1.jpg",
+    "images/photo0.jpg",
     "images/photo1.jpg",
     "images/IMG_6055.jpg",
     "images/IMG_6636.jpg",
     "images/IMG_6643.jpg",
     "images/IMG_6044.jpg",
     "images/IMG_6946.jpg",
-    "images/photo2.jpg"
+    "images/photo2.jpg",
+    "images/photo0.jpg"
+
   ],
 
   "videos": ["videos/video2.mp4", "videos/video1.mp4"],
@@ -25,6 +28,7 @@
     "I keep coming back to this one ♥",
     "Wherever this is — I'd go back in a second ✨",
     "You make ordinary days feel like something ★",
+    "Still my favourite photo of all time 💛",
     "Still my favourite photo of all time 💛"
   ]
 }

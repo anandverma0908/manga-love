@@ -9,7 +9,7 @@ const EndingSection: React.FC = () => {
   const titleRef = useScrollReveal();
   const theEndRef = useScrollReveal();
   const nextRef = useScrollReveal();
-  const credRef = useScrollReveal();
+  // const credRef = useScrollReveal();
 
   return (
     <section className={styles.section} id="ending">
