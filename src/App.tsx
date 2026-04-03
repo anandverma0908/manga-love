@@ -79,10 +79,10 @@ const App: React.FC = () => {
         <VolumeBanner text="★★★  CHAPTER 02 — The Face That Ruined Me ★★★" />
         <PhotoSection photos={photos} videos={videos} />
 
-        <VolumeBanner text={`★★★  CHAPTER 03 — Read This When You're Ready ★★★`} />
+        <VolumeBanner text={`★★★  CHAPTER 03 — They Lied. I Stayed. ★★★`} />
         <PoemSection />
 
-        <VolumeBanner text='★★★  FINAL CHAPTER — "WHATEVER YOU DECIDE"  ★★★' />
+        <VolumeBanner text={`★★★  FINAL CHAPTER — "Still, It's You"  ★★★`} />
         <EndingSection />
       </main>
     </>

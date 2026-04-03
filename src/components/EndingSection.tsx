@@ -75,11 +75,11 @@ const EndingSection: React.FC = () => {
           <div className="spd" />
 
           <div ref={sfxRef} className={`${styles.sfxBig} sr`}>
-            IT'S
+            I
             <br />
-            STILL
+            NEVER
             <br />
-            <span className={styles.sfxForever}>YOU</span>
+            <span className={styles.sfxForever}>LEFT</span>
           </div>
 
           <div
@@ -158,9 +158,13 @@ const EndingSection: React.FC = () => {
             style={{ transitionDelay: "0.5s" }}
           >
             <p>
-              "I'm not broken if you don't. I'm just someone who loved you with{" "}
+              "They came to end our story.
               <br />
-              everything he had. And that is enough." ★
+              But you can't end something
+              <br />
+              written this deep
+              <br />
+              in someone's chest." ★
             </p>
           </div>
         </div>
@@ -170,10 +174,10 @@ const EndingSection: React.FC = () => {
           <div className="ht" />
 
           <h2 ref={titleRef} className={`${styles.endTitle} sr`}>
-            WHATEVER
+            STILL
             <br />
-            YOU
-            <span className={styles.endTitleAccent}> DECIDE</span>
+            IT'S
+            <span className={styles.endTitleAccent}>YOU</span>
           </h2>
 
           <div
@@ -181,8 +185,8 @@ const EndingSection: React.FC = () => {
             className={`${styles.theEnd} sr`}
             style={{ transitionDelay: "0.2s" }}
           >
-            <p>THE END</p>
-            <small>★ but my feelings? those don't end. ★</small>
+            <p>NOT THE END.</p>
+            <small>★ it was never going to be. ★</small>
           </div>
 
           <div
@@ -191,9 +195,11 @@ const EndingSection: React.FC = () => {
             style={{ transitionDelay: "0.38s" }}
           >
             <div className={styles.nextLbl}>▶ NEXT ISSUE PREVIEW</div>
-            <div className={styles.nextTtl}>VOL. 3 — "She Said Something"</div>
+            <div className={styles.nextTtl}>
+              VOL. 3 — "When She Believed Him"
+            </div>
             <div className={styles.nextSub}>
-              the chapter he never thought he'd get to write.
+              the chapter where the truth finally came home. ♥
             </div>
           </div>
 
